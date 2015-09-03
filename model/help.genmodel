@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.ffontenoy.e4.help/src-gen" modelPluginID="fr.ffontenoy.e4.help"
+    modelName="Help" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    classNamePattern="Default{0}Impl" operationReflection="true" importOrganizing="true">
+  <foreignModel>help.ecore</foreignModel>
+  <genPackages prefix="Help" basePackage="fr.ffontenoy.e4.help.model" disposableProviderFactory="true"
+      ecorePackage="help.ecore#/">
+    <genClasses ecoreClass="help.ecore#//Toc">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute help.ecore#//Toc/label"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference help.ecore#//Toc/items"/>
+    </genClasses>
+    <genClasses ecoreClass="help.ecore#//TocItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute help.ecore#//TocItem/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute help.ecore#//TocItem/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute help.ecore#//TocItem/href"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference help.ecore#//TocItem/subItems"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+   <extension-point id="helpExtensionPoint" name="Help Extension Point" schema="schema/helpExtensionPoint.exsd"/>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated help -->
+      <package
+            uri="http://fr.ffontenoy.e4.help/model/1.0"
+            class="fr.ffontenoy.e4.help.model.help.HelpPackage"
+            genModel="model/help.genmodel"/>
+   </extension>
+   <extension
+         point="fr.ffontenoy.e4.stickyview.stickyviewExtensionPoint">
+      <StickyView
+            containerData="10000"
+            label="Online Help"
+            partClass="fr.ffontenoy.e4.help.parts.HelpPart"
+            partId="fr.ffontenoy.e4.help.Help"
+            position="right"
+            shortcut="M1+H"
+            visibleAtStartup="false">
+      </StickyView>
+   </extension>
+   <extension
+         id="id1"
+         point="org.eclipse.e4.workbench.model">
+      <processor
+            apply="always"
+            beforefragment="false"
+            class="fr.ffontenoy.e4.help.processors.HelpProcessor">
+      </processor>
+   </extension>
+
+</plugin>
